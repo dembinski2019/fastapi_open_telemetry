@@ -11,7 +11,8 @@ class AppSettings(BaseModel):
     PROJECT_NAME: str = None
     PROJECT_VERSION: str = None
     PROJECT_DESCRIPTION: str = None
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    BASE_DIR = os.path.dirname(os.path.dirname(
+        os.path.dirname(os.path.abspath(__file__))))
 
     def __init__(self, *args, **kwargs):
         super().__init__()
@@ -38,7 +39,7 @@ class GlobalSettings(BaseSettings):
     APP_SETTINGS: AppSettings = AppSettings()
 
     # ========================= 1rd PARTY APIS ===========================
-
+    MERCADO_BITCOIN_URL: str = Field(env='MERCADO_BITCOIN_URL')
     # ============================= DATABASE =============================
     DATABASE_URL: Optional[str]
 

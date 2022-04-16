@@ -12,6 +12,8 @@ uvicorn = "^0.17.6"
 pydantic = "^1.9.0"
 python-dotenv = {version = "^0.20.0", extras = ["pydantic"]}
 toml = "^0.10.2"
+httpx = "^0.22.0"
+pytest-asyncio = "^0.18.3"
 
 [tool.poetry.dev-dependencies]
 ipython = "^8.2.0"
@@ -21,6 +23,23 @@ pre-commit = "^2.18.1"
 flake8 = "^4.0.1"
 black = "^22.3.0"
 click = "^8.1.2"
+
+
+[tool.black]
+line-length = 88
+
+[tool.ipdb]
+context = 20
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-s"
+asyncio_mode = "auto"
+
+
+[tool.coverage.run]
+omit = []
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

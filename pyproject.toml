@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "Exemplo Fastapi Open Telemetry"
+version = "0.1.0"
+description = "Projeto teste de instrumentaçâo de uma api com Open Telemetry"
+authors = ["Everton Dembinski <everton_s.d@hotmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.75.1"
+uvicorn = "^0.17.6"
+pydantic = "^1.9.0"
+python-dotenv = {version = "^0.20.0", extras = ["pydantic"]}
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.2.0"
+ipdb = "^0.13.9"
+pytest = "^7.1.1"
+pre-commit = "^2.18.1"
+flake8 = "^4.0.1"
+black = "^22.3.0"
+click = "^8.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

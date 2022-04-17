@@ -1,7 +1,7 @@
 
 
 from src.settings import settings
-from src.clients import QuotationCoinsABC
+from src.domain import QuotationCoinsABC
 
 
 class MercadoBitcoinClient(QuotationCoinsABC):

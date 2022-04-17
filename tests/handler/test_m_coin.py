@@ -1,4 +1,4 @@
-from src.clients.m_coin import MercadoBitcoinClient
+from src.domain.m_coin import MercadoBitcoinClient
 
 
 async def test_m_coin_get_quotation():

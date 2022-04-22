@@ -1,7 +1,7 @@
-from src.domain.m_coin import MercadoBitcoinClient
+from app.domain.providers import MercadoBitcoinProvider
 
 
-async def test_m_coin_get_quotation():
+async def test_get_infos_of_mercado_bitcoin_provider():
     coin = 'BTC'
     expected_keys = [
         'high',
@@ -13,8 +13,8 @@ async def test_m_coin_get_quotation():
         'date'
     ]
 
-    m_bitcoin = MercadoBitcoinClient()
+    m_bitcoin = MercadoBitcoinProvider()
 
-    quotation = await m_bitcoin.get_quotation(coin)
+    quotation = await m_bitcoin.get_quotation_client(coin)
     for item in expected_keys:
         assert item in quotation.get('ticker')
